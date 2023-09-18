@@ -1,4 +1,4 @@
-# 화면에 Mary's cosmetics 을 출력하세요.
+# 화면에 Mary's cosmetics 을 출력하세요..
 print("Mary's cosmetics")
 
 #문자열을 출력하는것은 작은따옴표, 큰따옴표 둘 다 가능하다.
