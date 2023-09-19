@@ -4,4 +4,5 @@ for i in 리스트:
     if i.endswith('.h'):
         print(i)
     elif i.endswith('.c'):
-        print(i)
+        print(i) 
+ 

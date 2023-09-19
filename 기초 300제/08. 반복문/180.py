@@ -4,7 +4,7 @@
 # high_prices = [150, 300, 430, 880, 1000]
 
 low_prices  = [100, 200, 400, 800, 1000]
-high_prices = [150, 300, 430, 880, 1000]
+high_prices = [150, 300, 430, 880, 1000 ]
 
 # 변동폭 = int(high_prices) - int(high_prices)
 volatility = []
