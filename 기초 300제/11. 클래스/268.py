@@ -1,5 +1,5 @@
-# 266번에서 정의한 생성자를 통해 다음 정보를 갖는 객체를 생성해보세요. 
-
+# PER, PBR, 배당수익률은 변경될 수 있는 값입니다.
+# 이 값을 변경할 때 사용하는 set_per, set_pbr, set_dividend 메서드를 추가하세요.
 class Stock:
     def __init__(self, name, code, PER, PBR, divi):
         self.name = name
@@ -18,4 +18,3 @@ class Stock:
         return self.code
     
 삼성 = Stock("삼성전자", "005930", 15.79, 1.33, 2.83)
-print(삼성.divi) #배당수익률이 제대로 생성돼서 float형으로 줬던 2.83이 나온다.
