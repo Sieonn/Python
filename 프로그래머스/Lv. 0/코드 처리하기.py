@@ -56,11 +56,12 @@ def solution(code):
         return 'empty'
     return ret
                 
-code = "abc1abc1abc"
+code = "abc1abc1abc" 
 print(solution(code))    
 
-                
-                
-                
-                     
+
+def solution(code):
+    return "".join(code.split("1"))[::2] or "EMPTY"
+code = "abc1abc1abc"
+print(solution(code))                                    
              
