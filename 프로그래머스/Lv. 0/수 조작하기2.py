@@ -10,48 +10,32 @@
 # 즉, numLog[i]는 numLog[0]로부터 총 i번의 조작을 가한 결과가 저장되어 있습니다.
 
 # 주어진 정수 배열 numLog에 대해 조작을 위해 입력받은 문자열을 return 하는 solution 함수를 완성해 주세요.
-# def solution(numLog):
-#     count = []
-#     for i in range(len(numLog)):
-#         if numLog[i] == 1 :
-#             count.append("w") 
-#         elif numLog[i] == -1:
-#             count.append("s")
-#         elif numLog[i] == 10:
-#             count.append("d")
-#         elif numLog[i] == -10:
-#             count.append("a")
-#     return "".join(count)
 
-# def solution(n, control):
-#     numLog = [n]
-#     for i in range(len(control)):
-#         if control[i] == "w": n +=  1
-#         elif control[i] == "s": n -= 1
-#         elif control[i] == "d": n += 10
-#         else: n -= 10
-#     return n
-def solution(numLog):
-    numLog = []
-    result = ''
-    c = {"w":1, "s":-1, "d":10, "a":-10}
-    for i in range(numLog):
-        if c.values[i] == 0:
-            False
-        else:
-            result += c.values[i]
-    return result   
-
-numLog = [0, 1, 0, 10, 0, 1, 0, 10, 0, -1, -2, -1]
 
 def solution(numLog):
-    numLog = []
-    result = ''
-    c = {"w":1, "s":-1, "d":10, "a":-10}
-    for i in range(numLog):
-        if c.values[i] == 0:
-            False
-        else:
-            result += c.values[i]
-    return result 
+    answer = ''
+    for i in range(1, len(numLog)):
+        diff = numLog[i] - numLog[i-1] # 현재 값과 이전 값의 차이를 계산
+        if diff == 1:
+            answer += 'w' # 1 더하기
+        elif diff == -1:
+            answer += 's' # 1 빼기
+        elif diff == 10:
+            answer += 'd' # 10 더하기
+        elif diff == -10:
+            answer += 'a' # 10 빼기
+    return answer
+
+# --------------------------------------------------------------
+
+def solution(numLog):
+    answer = ''
+    dic = { 1: "w", -1: "s", 10: "d", -10: "a" }
     
+    for idx, val in enumerate(numLog):
+        if idx != len(numLog)-1: 
+            answer += dic[numLog[idx+1] - numLog[idx]]
+    
+    return answer
+
+#다시 풀어보기!
