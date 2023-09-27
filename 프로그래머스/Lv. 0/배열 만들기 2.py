@@ -11,17 +11,24 @@
 # 5	555	[5, 50, 55, 500, 505, 550, 555]
 # 10	20	[-1]
 
-# def solution(l, r):
-#     result = []
-#     for i in range(l, r+1):
-#        for v in i:
-#            if v % 5 ==0:
-               
-#             result.append(i)
-#     return sorted(result)
 
+def solution(l, r):
+    sd = []
+    
+    for i in range(l,r+1):
+        if all(num in ['0','5'] for num in str(i)):
+            sd.append(i)
+            
+    if len(sd) == 0:
+        sd.append(-1)
+        
+    return sd   
+                    
+l = 5
+r = 555
+print(solution(l, r))
 
-for i in range(0, 40):
-    for v in range(0):
-        if v % 5 ==0:
-            print(v)
+# a = 55
+# b= str(a)
+# print(int(b[1]))
+
