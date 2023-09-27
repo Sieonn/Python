@@ -13,7 +13,7 @@
 #     print(s)
 def solution(n):
     s = []
-    while n <= 1000:
+    while n != 0:
         if n % 2 == 0:
             s.append(n)
             n //= 2
